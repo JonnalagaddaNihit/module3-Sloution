@@ -9,24 +9,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/styles.css">
     <style>
         h1 {
             margin-bottom: 30px;
         }
 
         input[type="text"] {
-            width: 60%;
+            width: 47%;
             float: left;
         }
 
         .narrow-button {
-            float: left;
-            margin-left: 5%;
+            width: 47%;
+            margin-left: 4%;
+            float: right;
         }
 
         .search {
             display: block;
+            width: 100vw;
             margin-bottom: 50px;
         }
         
@@ -37,7 +38,7 @@
     <div class="container" ng-controller="NarrowItDownController as menu">
         <h1>Narrow Down Your Chinese Menu Choice</h1>
         <div class="search">
-            <input type="text" placeholder="search term" class="form-control form-control-sm" ng-model="menu.shortName">
+            <div><input type="text" placeholder="search term" class="form-control form-control-sm" ng-model="menu.shortName"></div>
             <div class="narrow-button">
                 <button class="btn btn-primary" ng-click="menu.matchedMenuItems(menu.shortName)">Narrow It Down For
                     Me!</button>
@@ -49,5 +50,4 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
     <script src="app.js"></script>
 </body>
-
 </html>
